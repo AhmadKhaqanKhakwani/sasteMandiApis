@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DataContext\**" />
+    <EmbeddedResource Remove="DataContext\**" />
+    <None Remove="DataContext\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\ICompanyRepository.cs" />
+    <Compile Remove="Interfaces\IItemRepository.cs" />
+    <Compile Remove="Interfaces\IPartyFinancialDetailRepository.cs" />
+    <Compile Remove="Interfaces\IPartyRepository.cs" />
+    <Compile Remove="Interfaces\IPaymentReceivingRepository.cs" />
+    <Compile Remove="Interfaces\IPurchaseInvoiceRepository.cs" />
+    <Compile Remove="Interfaces\IRoleRepository.cs" />
+    <Compile Remove="Interfaces\ISaleInvoicePaymentRepository.cs" />
+    <Compile Remove="Interfaces\ISaleInvoiceRepository.cs" />
+    <Compile Remove="Interfaces\IUserRepository.cs" />
+    <Compile Remove="Models\FinancifyContext.cs" />
+    <Compile Remove="Repositories\CommonRepository.cs" />
+    <Compile Remove="Repositories\ItemRepository.cs" />
+    <Compile Remove="Repositories\PartyFinancialDetailRepository.cs" />
+    <Compile Remove="Repositories\PartyRepository.cs" />
+    <Compile Remove="Repositories\PaymentReceivingRepository.cs" />
+    <Compile Remove="Repositories\PurchaseInvoiceRepository.cs" />
+    <Compile Remove="Repositories\RoleRepository.cs" />
+    <Compile Remove="Repositories\SaleInvoicePaymentRepository.cs" />
+    <Compile Remove="Repositories\SaleInvoiceRepository.cs" />
+    <Compile Remove="Repositories\UserRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,268 @@
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\appsettings.Development.json
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\appsettings.json
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.exe
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.deps.json
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.runtimeconfig.json
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.runtimeconfig.dev.json
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\ref\AccountManagement.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.pdb
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\BLL.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Data.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Utility.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\BLL.pdb
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Data.pdb
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\bin\Debug\net5.0\Utility.pdb
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.AssemblyReference.cache
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.AssemblyInfoInputs.cache
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.AssemblyInfo.cs
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.CoreCompileInputs.cache
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.MvcApplicationPartsAssemblyInfo.cs
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\staticwebassets\AccountManagement.StaticWebAssets.Manifest.cache
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\staticwebassets\AccountManagement.StaticWebAssets.xml
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\scopedcss\bundle\AccountManagement.styles.css
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.RazorTargetAssemblyInfo.cache
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.CopyComplete
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\ref\AccountManagement.dll
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.pdb
+C:\WorkSpace\Extra\Entity-API_ BaseProject\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.genruntimeconfig.cache
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\appsettings.Development.json
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\appsettings.json
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.exe
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.deps.json
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.runtimeconfig.json
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.runtimeconfig.dev.json
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\ref\AccountManagement.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.pdb
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\BLL.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Data.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Utility.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\BLL.pdb
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Data.pdb
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Utility.pdb
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.AssemblyReference.cache
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.AssemblyInfoInputs.cache
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.AssemblyInfo.cs
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.CoreCompileInputs.cache
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.MvcApplicationPartsAssemblyInfo.cs
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\staticwebassets\AccountManagement.StaticWebAssets.Manifest.cache
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\staticwebassets\AccountManagement.StaticWebAssets.xml
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\scopedcss\bundle\AccountManagement.styles.css
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.RazorTargetAssemblyInfo.cache
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.CopyComplete
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\ref\AccountManagement.dll
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.pdb
+C:\WorkSpace\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.genruntimeconfig.cache
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.AssemblyReference.cache
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.GeneratedMSBuildEditorConfig.editorconfig
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.AssemblyInfoInputs.cache
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.AssemblyInfo.cs
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.CoreCompileInputs.cache
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.MvcApplicationPartsAssemblyInfo.cs
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.MvcApplicationPartsAssemblyInfo.cache
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\ref\AccountManagement.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.pdb
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\appsettings.Development.json
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\appsettings.json
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.StaticWebAssets.xml
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.exe
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.deps.json
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.runtimeconfig.json
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.runtimeconfig.dev.json
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\ref\AccountManagement.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.pdb
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.OpenApi.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Runtime.Caching.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\BLL.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Data.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Utility.dll
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\BLL.pdb
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Data.pdb
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\bin\Debug\net5.0\Utility.pdb
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\scopedcss\bundle\AccountManagement.styles.css
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\staticwebassets\AccountManagement.StaticWebAssets.Manifest.cache
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.RazorTargetAssemblyInfo.cache
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.CopyComplete
+E:\GIT repos\AccountsM-API\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.genruntimeconfig.cache
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.StaticWebAssets.xml
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\appsettings.json
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.exe
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.deps.json
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.runtimeconfig.json
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.runtimeconfig.dev.json
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\AccountManagement.pdb
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\BLL.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Data.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Utility.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\BLL.pdb
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Data.pdb
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\bin\Debug\net5.0\Utility.pdb
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.AssemblyInfo.cs
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\scopedcss\bundle\AccountManagement.styles.css
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\staticwebassets\AccountManagement.StaticWebAssets.Manifest.cache
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.RazorTargetAssemblyInfo.cache
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.csproj.CopyComplete
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\refint\AccountManagement.dll
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.pdb
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\AccountManagement.genruntimeconfig.cache
+C:\Users\DELL\Desktop\AccountsManagement-API-main\AccountsManagement-API-main\AccountManagement\AccountManagement\obj\Debug\net5.0\ref\AccountManagement.dll
