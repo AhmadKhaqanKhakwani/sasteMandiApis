@@ -10,3 +10,10 @@
 /Data/obj
 /Utility/bin
 /Utility/obj
+/AccountManagement/AccountManagement/obj/project.assets.json
+/AccountManagement/AccountManagement/obj/project.nuget.cache
+/AccountManagement/AccountManagement/obj/SasteMandi.csproj.nuget.dgspec.json
+/AccountManagement/AccountManagement/obj/Debug/net6.0/SasteMandi.assets.cache
+/AccountManagement/AccountManagement/obj/Debug/net6.0/SasteMandi.GeneratedMSBuildEditorConfig.editorconfig
+*.lock
+*.vsidx
