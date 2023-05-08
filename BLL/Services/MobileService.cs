@@ -10,6 +10,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Utility.Enumerations;
 
 namespace BLL.Services
 {
@@ -128,6 +129,79 @@ namespace BLL.Services
             }
 
             return featuredCategoryDto;
+        }
+
+        //placeorder
+        public bool placeOrder(CreateOrderDto createOrderDto)
+        {
+            var products = _unitOfWork.ProductRepository.GetAllByIds(createOrderDto.products.Select(u => u.productId).ToList());
+            // var packages = _unitOfWork.PackageRepository.ge
+
+
+            Order order = new Order()
+            {
+                AdressId = createOrderDto.address.addressId,
+                StatusId = (int)OrderStatusEnum.Active,
+                IsActive = true,
+                Total = 0,
+                DiscountTotal = 0,
+                TaxTotal = 0,
+                CreatedBy = 1,
+                CreatedOn = DateTime.Now
+            };
+            _unitOfWork.OrderRepository.Add(order);
+
+            return true;
+        }
+
+        public bool addAddress(AddressDto addressDto)
+        {
+            Address address = new Address()
+            {
+                LocationId = addressDto.locationId,
+                IsActive = true,
+                GeoLocaton = addressDto.googleLocation,
+                AddressText = addressDto.addressText,
+                CreatedBy = 1,
+                CreatedOn = DateTime.Now
+            };
+
+            var addresss = _unitOfWork.AddressRepository.Add(address);
+
+            return true;
+        }
+
+        public bool deleteAddress(int id)
+        {
+
+            _unitOfWork.AddressRepository.DeleteAddress(id);
+
+            return true;
+        }
+        public List<AddressDto> getAddress()
+        {
+            var locations = _unitOfWork.AddressRepository.GetAll();
+
+            var locationDto = locations.Select(u => new AddressDto()
+            {
+                addressId = u.Id,
+                googleLocation = u.GeoLocaton,
+                locationText = u.Location.Title,
+                addressText = u.AddressText,
+                locationId = u.LocationId
+            }).ToList();
+
+
+            return locationDto;
+        }
+        public dynamic calculateOrderDetails(List<Product> products, List<Package> packages)
+        {
+            decimal total = 0;
+
+
+
+
+            return new { };
         }
     }
 }

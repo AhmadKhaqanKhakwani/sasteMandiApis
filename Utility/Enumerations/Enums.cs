@@ -33,4 +33,13 @@ namespace Utility.Enumerations
         Rejected = 2
     }
 
+    public enum OrderStatusEnum
+    {
+        Active = 1,
+        Delivered = 2,
+        Rejected = 3,
+        Canceled = 4,
+        Completed = 5
+    }
+
 }

@@ -20,6 +20,7 @@ namespace Data.Context.UnitOfWork
         IOrderRepository OrderRepository { get; }
         IOrderDetailRepository OrderDetailRepository { get; }
         ILocationRepository LocationRepository { get; }
+        IAddressRepository AddressRepository { get; }
 
     }
 }

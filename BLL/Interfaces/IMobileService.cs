@@ -15,5 +15,11 @@ namespace BLL.Interfaces
         List<PublicPackageDto> getPackages();
         List<LocationDto> getLocations();
 
+        // Placeorder
+        bool placeOrder(CreateOrderDto createOrderDto);
+        bool addAddress(AddressDto addressDto);
+        List<AddressDto> getAddress();
+        bool deleteAddress(int id);
+
     }
 }

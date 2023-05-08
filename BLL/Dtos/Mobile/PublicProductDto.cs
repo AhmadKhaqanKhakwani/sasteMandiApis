@@ -1,9 +1,6 @@
 ﻿using Data.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL.Dtos.Mobile
 {
@@ -21,7 +18,7 @@ namespace BLL.Dtos.Mobile
         public int displayOrder { get; set; }
         public PublicProductDto toProductDTO(Product product)
         {
-           var obj = new PublicProductDto()
+            var obj = new PublicProductDto()
             {
                 textEng = product.TitleEng,
                 textUrdu = product.TitleUrdu,
@@ -48,16 +45,16 @@ namespace BLL.Dtos.Mobile
             return obj;
         }
     }
-    public class PublicPackageDto 
+    public class PublicPackageDto
     {
         public string title { get; set; }
         public int totalPrice { get; set; }
         public List<PublicProductDto> products { get; set; }
-        
+
     }
     public class LocationDto
     {
-        public int id{ get; set; }
+        public int id { get; set; }
         public string title { get; set; }
 
     }
@@ -78,11 +75,22 @@ namespace BLL.Dtos.Mobile
     {
         public List<ProductAndPackage> products { get; set; }
         public List<PackageOrderDto> packages { get; set; }
-        public int locationId { get; set; }
-        public string googleLocation { get; set; }        
+        public AddressDto address { get; set; }
         public string freetext { get; set; }
+        public int discountId { get; set; }
 
     }
+
+    public class AddressDto
+    {
+        public int addressId { get; set; }
+        public int locationId { get; set; }
+        public string addressText { get; set; }
+        public string locationText { get; set; }
+        public string googleLocation { get; set; }
+    }
+
+
     public class Packaging
     {
         public string text { get; set; }

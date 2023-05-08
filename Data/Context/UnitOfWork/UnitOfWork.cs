@@ -16,8 +16,17 @@ namespace Data.Context.UnitOfWork
         private IOrderRepository _orderRepository;
         private IOrderDetailRepository _orderDetailRepository;
         private ILocationRepository _locationRepository;
+        private IAddressRepository _addressRepository;
 
 
+
+        public IAddressRepository AddressRepository
+        {
+            get
+            {
+                return _addressRepository ??= new AddressRepository();
+            }
+        }
         public ILocationRepository LocationRepository
         {
             get
@@ -25,6 +34,8 @@ namespace Data.Context.UnitOfWork
                 return _locationRepository ??= new LocationRepository();
             }
         }
+
+
         public IOrderRepository OrderRepository
         {
             get

@@ -105,11 +105,58 @@ namespace SasteMandi.Controllers
         [HttpPost]
         [ActionName("placeOrder")]
         [Route("placeOrder")]
-        public IActionResult placeOrder([FromBody]CreateOrderDto createOrderDto)
+        public IActionResult placeOrder([FromBody] CreateOrderDto createOrderDto)
         {
-            if(createOrderDto == null || createOrderDto.locationId == 0)
+            if (createOrderDto == null || createOrderDto.address.locationId == 0)
                 return Unauthorized(new { responseMessage = "Payload is incorrect" });
 
+            _mobileService.placeOrder(createOrderDto);
+
+            return Ok(new { responseMessage = "Success." });
+        }
+
+
+
+        [AllowAnonymous]
+        [HttpPost]
+        [ActionName("addAddress")]
+        [Route("addAddress")]
+        public IActionResult addAddress([FromBody] AddressDto addressDto)
+        {
+            if (addressDto == null || addressDto.locationId == 0)
+                return Unauthorized(new { responseMessage = "Payload is incorrect" });
+
+            _mobileService.addAddress(addressDto);
+
+            return Ok(new { responseMessage = "Success." });
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        [ActionName("getAddresses")]
+        [Route("getAddresses")]
+        public IActionResult getAllAddresses()
+        {
+
+            var result = _mobileService.getAddress();
+
+            if (result == null)
+                return Unauthorized(new { responseMessage = "Some thing went wrong." });
+
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        [ActionName("deleteAdresses")]
+        [Route("deleteAdresses")]
+        public IActionResult deleteAdresses(int id)
+        {
+
+            var result = _mobileService.deleteAddress(id);
+
+            if (!result)
+                return Unauthorized(new { responseMessage = "Some thing went wrong." });
 
             return Ok(new { responseMessage = "Success." });
         }
