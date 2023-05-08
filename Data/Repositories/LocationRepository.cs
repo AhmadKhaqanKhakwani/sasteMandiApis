@@ -1,14 +1,10 @@
-﻿
-using Data.Utils;
-using Utility.Commons;
-using Microsoft.EntityFrameworkCore;
+﻿using Data.Context;
+using Data.Entities;
+using Data.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using Data.Interfaces;
-using Data.Context;
-using Data.Entities;
 
 namespace Data.Repositories
 {
@@ -35,10 +31,10 @@ namespace Data.Repositories
         {
             try
             {
-                using(var _context = Db.Create())
+                using (var _context = Db.Create())
                 {
-                    
-                return _context.Locations.Find(id);
+
+                    return _context.Locations.Find(id);
 
                 }
 
@@ -47,7 +43,7 @@ namespace Data.Repositories
             {
                 return null;
             }
-          
+
         }
         public List<Location> GetAll()
         {
@@ -55,7 +51,7 @@ namespace Data.Repositories
             {
                 using (var _context = Db.Create())
                 {
-                    return _context.Locations.Where(u=>u.IsActive == true).ToList();
+                    return _context.Locations.Where(u => u.IsActive == true).ToList();
 
                 }
 
@@ -67,6 +63,42 @@ namespace Data.Repositories
 
         }
 
+
+        public Location Update(Location location)
+        {
+            try
+            {
+
+                using (var _context = Db.Create())
+                {
+                    _context.Locations.Update(location);
+                    _context.SaveChanges();
+                }
+                return location;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public bool Delete(int id)
+        {
+
+            using (var _context = Db.Create())
+            {
+
+                var currentSlider = _context.Locations.Find(id);
+                if (currentSlider != null)
+                {
+                    currentSlider.IsActive = false;
+                    _context.SaveChanges();
+                    return true;
+                }
+                else return false;
+            }
+
+        }
         public void Dispose()
         {
             GC.SuppressFinalize(true);

@@ -19,7 +19,7 @@ namespace BLL.Services
 
         public List<SliderDto> GetAllSlider()
         {
-            var slider = _unitOfWork.SliderRepository.GetAll().Select(u => new SliderDto { Id = u.Id, imageUrl = u.ImageUrl }).ToList();
+            var slider = _unitOfWork.SliderRepository.GetAll().Where(s => s.IsActive== true).Select(u => new SliderDto { Id = u.Id, imageUrl = u.ImageUrl }).ToList();
             return slider;
 
         }
@@ -96,10 +96,6 @@ namespace BLL.Services
 
 
         }
-        public bool Savefeaturedcategories(FeaturedCategoryDto featuredCategoryDto)
-        {
-            return true;
-        }
         public bool AddOrEditFeaturedCategory(FeaturedCategoryDto featuredCategoryDto)
         {
 
@@ -134,7 +130,7 @@ namespace BLL.Services
                 else
                 {
 
-                    
+
                     // Add
                     var featureObj = new FeaturedCategory
                     {
@@ -191,5 +187,67 @@ namespace BLL.Services
             }
 
         }
+
+
+        //Location Work
+
+        public List<LocationDto> GetAllLocation()
+        {
+            var result = _unitOfWork.LocationRepository.GetAll().Where(l => l.IsActive== true)
+                .Select(loc => new LocationDto
+                {
+                    id = loc.Id,
+                    title = loc.Title,
+                }).ToList();
+            return result;
+        }
+
+        public LocationDto GetLocation(int id)
+        {
+            var result = _unitOfWork.LocationRepository.Get(id);
+            if (result != null)
+            {
+                var obj = new LocationDto { id = result.Id, title = result.Title };
+                return obj;
+            }
+            return null;
+        }
+
+        public bool AddOrUpdateLocation(LocationDto locationDto)
+        {
+            // add loc
+            if (locationDto.id == 0)
+            {
+                var newLocation = new Location
+                {
+                    Title = locationDto.title,
+                    IsActive = true,
+                    CreatedOn = DateTime.Now,
+                    CreatedBy = 1,
+                };
+                _unitOfWork.LocationRepository.Add(newLocation);
+                return true;
+            }
+            else
+            {
+                //update
+                var locationObj = _unitOfWork.LocationRepository.Get(locationDto.id);
+                locationObj.Title = locationDto.title;
+                locationObj.UpdatedOn = DateTime.Now;
+                locationObj.UpdatedBy = 1;
+
+                _unitOfWork.LocationRepository.Update(locationObj);
+                return true;
+            }
+
+        }
+
+        public bool DeleteLocation(int id)
+        {
+            var result = _unitOfWork.LocationRepository.Delete(id);
+            return result;
+        }
+
+
     }
 }

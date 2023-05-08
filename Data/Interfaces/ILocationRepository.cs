@@ -10,6 +10,8 @@ namespace Data.Interfaces
         Location Add(Location location);
         Location Get(int id);
         List<Location> GetAll();
+        Location Update(Location location);
+        bool Delete(int id);
         void Dispose();
 
     }

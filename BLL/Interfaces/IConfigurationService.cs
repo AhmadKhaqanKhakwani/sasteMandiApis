@@ -10,14 +10,20 @@ namespace BLL.Interfaces
 {
     public interface IConfigurationService
     {
-        bool Savefeaturedcategories(FeaturedCategoryDto featuredCategoryDto);
+
         List<SliderDto> GetAllSlider();
         bool AddOrUpdateSlider(SliderDto sliderDto);
         bool DeleteSlider(int id);
 
-        // FeaturedCategory work
+        // featuredCategory work
         bool AddOrEditFeaturedCategory(FeaturedCategoryDto featuredCategoryDto);
         List<FeaturedCategoryDto> GetAllFeaturedCategory();
         bool DeleteFeaturedCategory(int id);
+
+        // location work
+        List<LocationDto> GetAllLocation();
+        LocationDto GetLocation(int id);
+        bool AddOrUpdateLocation(LocationDto locationDto);
+        bool DeleteLocation(int id);
     }
 }

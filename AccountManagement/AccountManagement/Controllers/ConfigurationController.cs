@@ -20,7 +20,7 @@ namespace SasteMandi.Controllers
             configurationService = _configurationService;
         }
 
-        
+        // slider  APIs
         [AllowAnonymous]
         [HttpGet]
         [ActionName("GetAllSlider")]
@@ -92,7 +92,7 @@ namespace SasteMandi.Controllers
         [HttpPost]
         [ActionName("AddOrEditFeatCategory")]
         [Route("AddOrEditFeatCategory")]
-        public IActionResult AddOrEditFeatCategory([FromBody]FeaturedCategoryDto featuredCategoryDto)
+        public IActionResult AddOrEditFeatCategory([FromBody] FeaturedCategoryDto featuredCategoryDto)
         {
 
             var result = configurationService.AddOrEditFeaturedCategory(featuredCategoryDto);
@@ -123,6 +123,77 @@ namespace SasteMandi.Controllers
                 return Ok(result);
             }
         }
+
+        // Location  APIs
+
+        [AllowAnonymous]
+        [HttpGet]
+        [ActionName("GetAllLocation")]
+        [Route("GetAllLocation")]
+        public IActionResult GetAllLocation()
+        {
+            var records = configurationService.GetAllLocation();
+            if (records == null)
+            return Ok(new { responseMessage = "No data found" });
+
+            return Ok(records);
+        }
+
+
+        [AllowAnonymous]
+        [HttpGet]
+        [ActionName("GetLocation")]
+        [Route("GetLocation")]
+        public IActionResult GetLocation([FromBody] int id)
+        {
+            if (id == 0)
+            {
+                return Ok(new { responseMessage = "Please provide an id"});
+            }
+            var records = configurationService.GetLocation(id);
+            if (records == null)
+                return Ok(new { responseMessage = "No data found" });
+
+            return Ok(records);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        [ActionName("AddOrUpdateLocation")]
+        [Route("AddOrUpdateLocation")]
+        public IActionResult AddOrUpdateLocation([FromBody] LocationDto locationDto)
+        {
+
+            var result = configurationService.AddOrUpdateLocation(locationDto);
+
+            if (!result)
+                return Unauthorized(new { responseMessage = "Some thing went wrong." });
+
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpDelete]
+        [ActionName("DeleteLocation")]
+        [Route("DeleteLocation")]
+        public IActionResult DeleteLocation([FromBody] int id)
+        {
+            if (id == 0)
+            {
+                return Unauthorized(new { responseMessage = "Please provide an id" });
+            }
+            else
+            {
+                var result = configurationService.DeleteLocation(id);
+
+                if (!result)
+                    return Unauthorized(new { responseMessage = "Some thing went wrong." });
+
+                return Ok(result);
+            }
+        }
+
+
 
 
 

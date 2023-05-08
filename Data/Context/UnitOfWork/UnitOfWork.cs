@@ -1,10 +1,6 @@
 ﻿using Data.Interfaces;
 using Data.Repositories;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data.Context.UnitOfWork
 {
@@ -29,7 +25,6 @@ namespace Data.Context.UnitOfWork
                 return _locationRepository ??= new LocationRepository();
             }
         }
-
         public IOrderRepository OrderRepository
         {
             get
@@ -103,7 +98,7 @@ namespace Data.Context.UnitOfWork
             {
                 if (disposing)
                 {
-                   // _context.Dispose();
+                    // _context.Dispose();
                 }
             }
             this.disposed = true;

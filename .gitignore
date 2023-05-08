@@ -17,3 +17,8 @@
 /AccountManagement/AccountManagement/obj/Debug/net6.0/SasteMandi.GeneratedMSBuildEditorConfig.editorconfig
 *.lock
 *.vsidx
+
+
+.vs
+AccountManagement\AccountManagement\bin\Debug\net6.0
+/AccountManagement/AccountManagement/bin/Debug/net6.0/AccountManagement.dll
