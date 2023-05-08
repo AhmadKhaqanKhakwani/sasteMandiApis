@@ -1,6 +1,7 @@
 ﻿using Data.Context;
 using Data.Entities;
 using Data.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -76,7 +77,7 @@ namespace Data.Repositories
             {
                 using (var _context = Db.Create())
                 {
-                    return _context.FeaturedCategories.Where(u => u.IsActive == true).ToList();
+                    return _context.FeaturedCategories.Include(u => u.SubCategories).Where(u => u.IsActive == true).ToList();
 
                 }
 

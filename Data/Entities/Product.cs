@@ -19,16 +19,16 @@ namespace Data.Entities
         public string TitleEng { get; set; }
         public string TitleUrdu { get; set; }
         public int DescriptionId { get; set; }
-        public int PerKgPrice { get; set; }
-        public int CategoryId { get; set; }
+        public int DeafultPriceId { get; set; }
+        public int FeaturedCategoryId { get; set; }
         public bool IsActive { get; set; }
         public int CreatedBy { get; set; }
         public DateTime CreatedOn { get; set; }
         public int? UpdatedBy { get; set; }
         public DateTime? UpdatedOn { get; set; }
 
-        public virtual ProductCategory Category { get; set; }
         public virtual ProductDescription Description { get; set; }
+        public virtual FeaturedCategory FeaturedCategory { get; set; }
         public virtual ICollection<ColsedStock> ColsedStocks { get; set; }
         public virtual ICollection<PackageDetail> PackageDetails { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }

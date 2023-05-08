@@ -7,6 +7,7 @@ namespace Data.Entities
     {
         public FeaturedCategory()
         {
+            Products = new HashSet<Product>();
             SubCategories = new HashSet<SubCategory>();
         }
 
@@ -22,6 +23,7 @@ namespace Data.Entities
         public int? UpdatedBy { get; set; }
         public DateTime? UpdatedOn { get; set; }
 
+        public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<SubCategory> SubCategories { get; set; }
     }
 }

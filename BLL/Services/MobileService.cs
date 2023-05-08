@@ -37,7 +37,7 @@ namespace BLL.Services
                     imageUrl = product.ProductImages.FirstOrDefault()?.ImageUrl ?? "",
                     displayOrder = 1,
                     packaging = product.ProductPackings.Select(u=>new Packaging() { text = u.Weight.ToString() , price = 100 , oldPrice = 50, isDeafult = u.IsDefault}).ToList() ,
-                    categoryId = product.CategoryId,
+                    categoryId = product.FeaturedCategoryId,
                     subCategory = product.SubCategoryToProducts.Select(u=>u.Id).ToList()
                 });
             } 

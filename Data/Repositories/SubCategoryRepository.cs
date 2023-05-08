@@ -31,6 +31,24 @@ namespace Data.Repositories
                 return null;
             }
         }
+
+        public List<SubCategory> AddRange(List<SubCategory> SubCategory)
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    _context.SubCategories.AddRange(SubCategory);
+                    _context.SaveChanges();
+                }
+
+                return SubCategory;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public  SubCategory Get(int id)
         {
             try
@@ -66,6 +84,25 @@ namespace Data.Repositories
             }
 
         }
+
+        public List<SubCategory> GetByFeaturedId(int featuredCategoryId)
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    return _context.SubCategories.Where(u => u.IsActive == true && u.FeaturedCategoryId == featuredCategoryId).ToList();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
 
         public void Dispose()
         {

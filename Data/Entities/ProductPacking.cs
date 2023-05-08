@@ -15,6 +15,7 @@ namespace Data.Entities
         public DateTime CreatedOn { get; set; }
         public int? UpdatedBy { get; set; }
         public DateTime? UpdatedOn { get; set; }
+        public string PackingTitle { get; set; }
 
         public virtual Pricing Price { get; set; }
         public virtual Product Product { get; set; }

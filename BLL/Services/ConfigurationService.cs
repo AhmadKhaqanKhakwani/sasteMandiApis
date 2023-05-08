@@ -112,6 +112,36 @@ namespace BLL.Services
                         currentFeaturedCategory.UpdatedOn = System.DateTime.Now;
                         currentFeaturedCategory.UpdatedBy = 1;
 
+                        _unitOfWork.FeaturedCategoryRepository.Update(currentFeaturedCategory);
+
+                        // 1, 2, 3, 4, 5, 6
+                        var subCategoriesDb = _unitOfWork.SubCategoryRepository.GetByFeaturedId(featuredCategoryDto.featuredCategoryId).Select( u => u.Id).ToList();
+
+                        // 1, 3, 4
+                        var idsToDelete = subCategoriesDb.Where(u => !featuredCategoryDto.subCategory.Select(u => u.subCategoryId).ToList().Contains(u));
+                        // idsToDelete = 2, 5, 6
+
+
+                        foreach (var item in featuredCategoryDto.subCategory)
+                        {
+                            if (item.subCategoryId == 0)
+                            {
+                                // Add
+
+                            }
+                            else
+                            {
+                                // update
+
+                            }
+                        }
+
+                        foreach (var item in idsToDelete)
+                        {
+                            //_unitOfWork.SubCategoryRepository.
+                        }
+
+
                         // subCategories
                         //var subCategoryList = featuredCategoryDto.subCategory;
                         //var subCatObj = new SubCategory()
@@ -125,7 +155,7 @@ namespace BLL.Services
                     }
 
 
-                    _unitOfWork.FeaturedCategoryRepository.Update(currentFeaturedCategory);
+                    
                 }
                 else
                 {
@@ -144,12 +174,14 @@ namespace BLL.Services
                         CreatedOn = System.DateTime.Now,
                     };
 
+                  var featuredCategory = _unitOfWork.FeaturedCategoryRepository.Add(featureObj);
                     // Dynamically add
                     foreach (var subCategoryDto in featuredCategoryDto.subCategory)
                     {
                         var subCategory = new SubCategory
                         {
-                            FeaturedCategoryId = subCategoryDto.featuredCategoryId,
+                            
+                            FeaturedCategoryId = featuredCategory.Id,
                             Title = subCategoryDto.text,
                             DisplayOrder = subCategoryDto.displayOrder,
                             IsActive = true,
@@ -157,11 +189,23 @@ namespace BLL.Services
                             CreatedOn = System.DateTime.Now,
                         };
 
-                        _unitOfWork.SubCategoryRepository.Add(subCategory);
                     };
 
-                    _unitOfWork.FeaturedCategoryRepository.Add(featureObj);
+                    var subCategories = featuredCategoryDto.subCategory.Select(u => new SubCategory
+                    {
+                        FeaturedCategoryId = featuredCategory.Id,
+                        Title = u.text,
+                        DisplayOrder = u.displayOrder,
+                        IsActive = true,
+                        CreatedBy = 786,
+                        CreatedOn = System.DateTime.Now,
+                    }).ToList();
+                       
+                    _unitOfWork.SubCategoryRepository.AddRange(subCategories);
+
+                    
                 }
+
 
 
                 return true;
