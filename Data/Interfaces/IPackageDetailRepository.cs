@@ -11,6 +11,7 @@ namespace Data.Interfaces
         Product Get(int id);
         List<Product> GetAll();
         List<Product> GetAllByIds(List<int> productIds);
+        List<Product> GetAllFiltered(int featuredCategoryId, int SubCategoryId);
         void Dispose();
 
     }

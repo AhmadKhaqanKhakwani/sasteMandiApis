@@ -6,14 +6,14 @@ namespace BLL.Dtos.Mobile
 {
     public class PublicProductDto
     {
+        public int productId { get; set; }
         public string textEng { get; set; }
         public string textUrdu { get; set; }
         public int categoryId { get; set; }
         public List<int> subCategory { get; set; }
         public string imageUrl { get; set; }
-        public List<Packaging> packaging { get; set; }
-        public int packagePrice { get; set; }
-        public int packagePriceId { get; set; }
+        public List<PackagingDto> packaging { get; set; }
+        public string packageProductWeight { get; set; }
         public int packageDispalyOrder { get; set; }
         public int displayOrder { get; set; }
         public PublicProductDto toProductDTO(Product product)
@@ -24,7 +24,7 @@ namespace BLL.Dtos.Mobile
                 textUrdu = product.TitleUrdu,
                 imageUrl = product.ProductImages.FirstOrDefault()?.ImageUrl ?? "",
                 displayOrder = 1,
-                packaging = product.ProductPackings.Select(u => new Packaging() { text = u.Weight.ToString(), price = 100, oldPrice = 50, isDeafult = u.IsDefault }).ToList(),
+                packaging = product.ProductPackings.Select(u => new PackagingDto() { text = u.Weight.ToString(), price = 100, oldPrice = 50, isDeafult = u.IsDefault }).ToList(),
                 categoryId = product.FeaturedCategoryId,
                 subCategory = product.SubCategoryToProducts.Select(u => u.Id).ToList()
             };
@@ -40,6 +40,7 @@ namespace BLL.Dtos.Mobile
                 imageUrl = product.ProductImages.FirstOrDefault()?.ImageUrl ?? "",
                 displayOrder = 1,
                 categoryId = product.FeaturedCategoryId,
+                packageProductWeight = "2 KG"
             };
 
             return obj;
@@ -47,6 +48,8 @@ namespace BLL.Dtos.Mobile
     }
     public class PublicPackageDto
     {
+
+        public int packageId{ get; set; }
         public string title { get; set; }
         public int totalPrice { get; set; }
         public List<PublicProductDto> products { get; set; }
@@ -91,8 +94,9 @@ namespace BLL.Dtos.Mobile
     }
 
 
-    public class Packaging
+    public class PackagingDto
     {
+        public int packingId { get; set; }
         public string text { get; set; }
         public int price { get; set; }
         public int priceId { get; set; }

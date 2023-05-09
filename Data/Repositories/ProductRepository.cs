@@ -66,6 +66,25 @@ namespace Data.Repositories
             }
 
         }
+        public List<Product> GetAllFiltered(int featuredCategoryId, int SubCategoryId)
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    return _context.Products.Where(u => u.IsActive == true && u.FeaturedCategoryId == featuredCategoryId && u.SubCategoryToProducts.Select(u=>u.SubCategoryId).Contains(SubCategoryId))
+                        .Include(u => u.ProductPackings).Include(u => u.SubCategoryToProducts).Include(u => u.ProductImages).ToList();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+        
         public List<Product> GetAllByIds(List<int> productIds)
         {
             try
