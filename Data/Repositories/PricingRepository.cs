@@ -65,7 +65,23 @@ namespace Data.Repositories
             }
 
         }
+        public List<Pricing> GetAllByIds(List<int> ids)
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    return _context.Pricings.Where(u => u.IsActive == true && ids.Contains(u.Id)).ToList();
 
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
         public void Dispose()
         {
             GC.SuppressFinalize(true);

@@ -11,7 +11,7 @@ namespace BLL.Interfaces
     {
         List<FeaturedCategoryDto> getPublicMainView();
         List<SliderDto> getSlider();
-        List<PublicProductDto> getProducts();
+        List<PublicProductDto> getProducts(int featuredCategoryId, int SubCategoryId);
         List<PublicPackageDto> getPackages();
         List<LocationDto> getLocations();
 
