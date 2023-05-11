@@ -9,10 +9,11 @@ namespace Data.Interfaces
     {
         SubCategory Add(SubCategory stock);
         List<SubCategory> AddRange(List<SubCategory> SubCategory);
+        SubCategory Update(SubCategory SubCategory);
         SubCategory Get(int id);
         List<SubCategory> GetAll();
-
         List<SubCategory> GetByFeaturedId(int featuredCategoryId);
+        bool Delete(int subCategoryId);
         void Dispose();
 
     }

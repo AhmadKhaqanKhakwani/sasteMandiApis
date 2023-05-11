@@ -64,7 +64,7 @@ namespace Data.Repositories
 
         }
 
-        //Update Adress
+        //Update Address
 
         public Address UpdateAddress(Address slider)
         {

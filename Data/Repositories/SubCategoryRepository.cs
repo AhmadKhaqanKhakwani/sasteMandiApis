@@ -49,6 +49,25 @@ namespace Data.Repositories
                 return null;
             }
         }
+
+
+        public SubCategory Update(SubCategory SubCategory)
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    _context.SubCategories.Update(SubCategory);
+                    _context.SaveChanges();
+                }
+
+                return SubCategory;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public  SubCategory Get(int id)
         {
             try
@@ -102,7 +121,20 @@ namespace Data.Repositories
             }
 
         }
-
+        public bool Delete(int id)
+        {
+            using (var _context = Db.Create())
+            {
+                var currentCategory = _context.SubCategories.Find(id);
+                if (currentCategory != null)
+                {
+                    currentCategory.IsActive = false;
+                    _context.SaveChanges();
+                    return true;
+                }
+                else return false;
+            }
+        }
 
         public void Dispose()
         {

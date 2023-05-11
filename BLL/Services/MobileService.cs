@@ -131,7 +131,7 @@ namespace BLL.Services
             return featuredCategoryDto;
         }
 
-        //placeorder
+        //place-order
         public bool placeOrder(CreateOrderDto createOrderDto)
         {
             var products = _unitOfWork.ProductRepository.GetAllByIds(createOrderDto.products.Select(u => u.productId).ToList());
@@ -156,7 +156,7 @@ namespace BLL.Services
 
         public bool addAddress(AddressDto addressDto)
         {
-            Address address = new Address()
+            Address addressObj = new Address()
             {
                 LocationId = addressDto.locationId,
                 IsActive = true,
@@ -166,7 +166,7 @@ namespace BLL.Services
                 CreatedOn = DateTime.Now
             };
 
-            var addresss = _unitOfWork.AddressRepository.Add(address);
+            var address = _unitOfWork.AddressRepository.Add(addressObj);
 
             return true;
         }

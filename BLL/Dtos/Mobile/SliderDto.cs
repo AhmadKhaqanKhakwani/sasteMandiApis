@@ -11,4 +11,9 @@ namespace BLL.Dtos.Mobile
         public string imageUrl { get; set; }
         public int Id { get; set; }
     }
+    public class SliderResult
+    {
+        public List<SliderDto> Sliders { get; set; }
+        public int Total { get; set; }
+    }
 }

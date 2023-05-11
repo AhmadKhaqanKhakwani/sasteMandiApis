@@ -16,12 +16,15 @@ namespace BLL.Dtos.Mobile
         public int displayOrder { get; set; }
         public string imageURL { get; set; }
         public string text { get; set; }
+        public bool isPackage { get; set; }
+        
         public List<SubCategoryDto> subCategory { get; set; }
     }
     public class SubCategoryDto
     {
         public int subCategoryId { get; set; }
         public int featuredCategoryId { get; set; }
+        public string title { get; set; } // discussion Req.
         public string text { get; set; }
         public bool IsActive { get; set; }
         public int CreatedBy { get; set; }

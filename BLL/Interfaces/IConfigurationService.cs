@@ -11,7 +11,7 @@ namespace BLL.Interfaces
     public interface IConfigurationService
     {
 
-        List<SliderDto> GetAllSlider();
+        SliderResult GetAllSlider();
         bool AddOrUpdateSlider(SliderDto sliderDto);
         bool DeleteSlider(int id);
 

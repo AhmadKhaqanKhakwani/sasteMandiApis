@@ -60,7 +60,8 @@ namespace Data.Repositories
                 using (var _context = Db.Create())
                 {
 
-                    return _context.FeaturedCategories.Find(id);
+                    var result = _context.FeaturedCategories.Find(id);
+                    return result;
 
                 }
 
@@ -91,9 +92,9 @@ namespace Data.Repositories
 
         public bool DeleteFeaturedCategory(int id)
         {
-            using(var _context = Db.Create())
+            using (var _context = Db.Create())
             {
-                var currentFeatured= _context.FeaturedCategories.Find(id);
+                var currentFeatured = _context.FeaturedCategories.Find(id);
                 if (currentFeatured != null)
                 {
                     currentFeatured.IsActive = false;

@@ -40,9 +40,12 @@ namespace SasteMandi.Controllers
         [HttpPost]
         [ActionName("AddOrUpdateSlider")]
         [Route("AddOrUpdateSlider")]
-        public IActionResult AddOrUpdateSlider([FromBody] SliderDto slider)
+        public IActionResult AddOrUpdateSlider([FromBody] SliderDto slider) 
         {
-
+            if (slider == null || slider.imageUrl.Trim() == "")
+            {
+                return Ok("Please provide valid payload");
+            }
             var result = configurationService.AddOrUpdateSlider(slider);
 
             if (!result)
@@ -59,7 +62,7 @@ namespace SasteMandi.Controllers
         {
             if (id == 0)
             {
-                return Unauthorized(new { responseMessage = "Please provide an id" });
+                return Unauthorized(new { responseMessage = "Invalid payload!" });
             }
             else
             {
@@ -111,7 +114,7 @@ namespace SasteMandi.Controllers
         {
             if (id == 0)
             {
-                return Unauthorized(new { responseMessage = "Please provide an id" });
+                return Unauthorized(new { responseMessage = "Invalid payload!" });
             }
             else
             {
