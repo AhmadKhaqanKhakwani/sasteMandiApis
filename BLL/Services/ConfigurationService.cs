@@ -152,7 +152,7 @@ namespace BLL.Services
                         {
                             FeaturedCategoryId = featuredCategory.Id,
                             Title = u.title,
-                            DisplayOrder = u.displayOrder,
+                            DisplayOrder = 0,
                             IsActive = true,
                             CreatedBy = 1,
                             CreatedOn = System.DateTime.Now,
@@ -176,14 +176,14 @@ namespace BLL.Services
                         currentFeaturedCategory.UpdatedOn = System.DateTime.Now;
                         currentFeaturedCategory.UpdatedBy = 1;
 
-                        _unitOfWork.FeaturedCategoryRepository.Update(currentFeaturedCategory);
+                        var updatedFeatured = _unitOfWork.FeaturedCategoryRepository.Update(currentFeaturedCategory);
 
-                        // 1, 2, 3, 4, 5, 6
+                        
                         var subCategoriesDb = _unitOfWork.SubCategoryRepository.GetByFeaturedId(featuredCategoryDto.featuredCategoryId).Select(u => u.Id).ToList();
+                        // 58,59
 
-                        // subCategoriesDb : 1, 3, 5
-                        var idsToDelete = subCategoriesDb.Where(u => !featuredCategoryDto.subCategory.Select(u => u.subCategoryId).ToList().Contains(u));
-                        // idsToDelete = 2, 4, 6
+                        var idsToDelete = subCategoriesDb.Where(u => !featuredCategoryDto.subCategory.Select(u => u.subCategoryId).ToList().Contains(u)).ToList();
+                        // 58, 0
 
 
                         if (featuredCategoryDto.subCategory != null)
@@ -195,7 +195,7 @@ namespace BLL.Services
                                     // Add
                                     var subCatObj = new SubCategory()
                                     {
-                                        FeaturedCategoryId = item.featuredCategoryId,
+                                        FeaturedCategoryId = currentFeaturedCategory.Id,
                                         Title = item.title,
                                         IsActive = true,
                                         DisplayOrder = item.displayOrder,
@@ -203,22 +203,45 @@ namespace BLL.Services
                                         CreatedBy = 1,
                                     };
                                     var saved = _unitOfWork.SubCategoryRepository.Add(subCatObj);
-
+                                    if (saved == null)
+                                    {
+                                        return false;
+                                    }
                                 }
                                 else
                                 {
+
                                     // update
-                                    var subCatUpdate = new SubCategory()
+                                    var currentSubCat = _unitOfWork.SubCategoryRepository.Get(item.subCategoryId);
+
+                                    if (currentSubCat != null)
                                     {
-                                        Id = item.subCategoryId,
-                                        FeaturedCategoryId = item.featuredCategoryId,
-                                        Title = item.title,
-                                        IsActive = item.IsActive,
-                                        DisplayOrder = item.displayOrder,
-                                        UpdatedOn = System.DateTime.Now,
-                                        UpdatedBy = 1
-                                    };
-                                    var updated = _unitOfWork.SubCategoryRepository.Update(subCatUpdate);
+                                        //currentSubCat.FeaturedCategoryId = item.featuredCategoryId;
+                                        //currentSubCat.Id = item.subCategoryId;
+                                        currentSubCat.Title = item.title;
+                                        currentSubCat.IsActive = item.IsActive;
+                                        currentSubCat.DisplayOrder = 0;
+                                        currentSubCat.UpdatedOn = DateTime.Now;
+                                        currentSubCat.UpdatedBy = 1;
+
+                                        var updatedSubCat = _unitOfWork.SubCategoryRepository.Update(currentSubCat);
+                                        //if (updatedSubCat != null) // if updated
+                                        //{
+                                        //    return true;
+                                        //}
+                                        //else return false;
+                                    }
+                                    //var subCatObj = new SubCategory()
+                                    //{
+                                    //    Id = item.subCategoryId,
+                                    //    FeaturedCategoryId = item.featuredCategoryId,
+                                    //    Title = item.title,
+                                    //    IsActive = item.IsActive,
+                                    //    DisplayOrder = item.displayOrder,
+                                    //    UpdatedOn = System.DateTime.Now,
+                                    //    UpdatedBy = 1
+                                    //};
+                                    //var updated = _unitOfWork.SubCategoryRepository.Update(subCatObj);
 
                                 }
                             }
