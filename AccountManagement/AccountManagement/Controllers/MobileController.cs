@@ -59,10 +59,10 @@ namespace SasteMandi.Controllers
         [HttpGet]
         [ActionName("getDashboardProduct")]
         [Route("getDashboardProduct")]
-        public IActionResult getDashboardProduct()
+        public IActionResult getDashboardProduct(int featuredCategoryId , int SubCategoryId)
         {
 
-            var result = _mobileService.getProducts();
+            var result = _mobileService.getProducts(featuredCategoryId,  SubCategoryId);
 
             if (result == null)
                 return Unauthorized(new { responseMessage = "Some thing went wrong." });

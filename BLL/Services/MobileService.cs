@@ -23,24 +23,32 @@ namespace BLL.Services
             _unitOfWork = unitOfWork;  
         }
 
-        public List<PublicProductDto> getProducts()
+        public List<PublicProductDto> getProducts(int featuredCategoryId, int SubCategoryId)
         {
-            var products = _unitOfWork.ProductRepository.GetAll();
-           
+            var products = _unitOfWork.ProductRepository.GetAllFiltered(featuredCategoryId,  SubCategoryId);
 
+            var pricing = _unitOfWork.PricingRepository.GetAllByIds(products.Select(u => u.DeafultPriceId).ToList());
+          
             var productDtos = new List<PublicProductDto>();
+
             foreach(var product in products)
             {
-                productDtos.Add(new PublicProductDto()
+               var packingPricing = _unitOfWork.PricingRepository.GetAllByIds(product.ProductPackings.Select(u => u.PriceId).ToList());
+
+                var productDto = new PublicProductDto()
                 {
+                    productId = product.Id,
                     textEng = product.TitleEng,
                     textUrdu = product.TitleUrdu,
                     imageUrl = product.ProductImages.FirstOrDefault()?.ImageUrl ?? "",
                     displayOrder = 1,
-                    packaging = product.ProductPackings.Select(u=>new Packaging() { text = u.Weight.ToString() , price = 100 , oldPrice = 50, isDeafult = u.IsDefault}).ToList() ,
-                    categoryId = product.FeaturedCategoryId,
-                    subCategory = product.SubCategoryToProducts.Select(u=>u.Id).ToList()
-                });
+                    packaging = product.ProductPackings.Select(u => new PackagingDto() { packingId = u.Id, text = u.PackingTitle, price = (int)packingPricing.FirstOrDefault(p=> p.Id == u.PriceId).Amount, oldPrice = (int)packingPricing.FirstOrDefault(p => p.Id == u.PriceId).DiscountedAmount, isDeafult = false }).ToList(),
+                    //categoryId = product.FeaturedCategoryId,
+                    //subCategory = product.SubCategoryToProducts.Select(u => u.Id).ToList()
+                };
+
+                productDto.packaging.Add(new PackagingDto() { packingId = 0, text = "1 Kg", price = (int)pricing.FirstOrDefault(p => p.Id == product.DeafultPriceId).Amount, oldPrice = (int)pricing.FirstOrDefault(p => p.Id == product.DeafultPriceId).DiscountedAmount, isDeafult = true });
+                productDtos.Add(productDto);
             } 
 
             return productDtos;
@@ -66,7 +74,7 @@ namespace BLL.Services
 
                 packageDtos.Add(
                 new PublicPackageDto()
-                {
+                {   packageId = package.Id,
                     title = package.PackageTitle,
                     totalPrice = package.PackageTotalPrice,
                     products = products.Where(u => package.PackageDetails.Select(u => u.ProductId).ToList().Contains(u.Id)).Select(u => new PublicProductDto().toPackageProductDTO(u)).ToList()
