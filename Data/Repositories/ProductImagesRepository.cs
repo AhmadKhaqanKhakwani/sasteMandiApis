@@ -8,95 +8,106 @@ using System.Linq;
 
 namespace Data.Repositories
 {
-    public class PricingRepository : IDisposable, IPricingRepository
+    public class ProductImagesRepository : IDisposable, IProductImagesRepository
     {
-        public Pricing Add(Pricing pricing)
+        public ProductImage Add(ProductImage productImage)
         {
             try
             {
                 using (var _context = Db.Create())
                 {
-                    _context.Pricings.Add(pricing);
+                    _context.ProductImages.Add(productImage);
                     _context.SaveChanges();
                 }
-                return pricing;
+
+                return productImage;
             }
             catch (Exception ex)
             {
                 return null;
             }
         }
-        public List<Pricing> AddRange(List<Pricing> pricing)
+        public ProductImage Get(int id)
         {
             try
             {
                 using (var _context = Db.Create())
                 {
-                    _context.Pricings.AddRange(pricing);
+
+                    return _context.ProductImages.Find(id);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+        public List<ProductImage> GetAll()
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    return _context.ProductImages.Where(u => u.IsActive == true).ToList();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
+        //Update image
+
+        public ProductImage UpdateSlider(ProductImage image)
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    _context.ProductImages.Update(image);
                     _context.SaveChanges();
+
                 }
-                return pricing;
+
+                return image;
+
             }
             catch (Exception ex)
             {
                 return null;
             }
+
         }
-        public Pricing Get(int id)
+
+        public bool Delete(int id)
         {
-            try
+
+            using (var _context = Db.Create())
             {
-                using (var _context = Db.Create())
+
+                var currentImage = _context.ProductImages.Find(id);
+                if (currentImage != null)
                 {
-
-                    return _context.Pricings.Find(id);
-
+                    currentImage.IsActive = false;
+                    _context.SaveChanges();
+                    return true;
                 }
-
-            }
-            catch (Exception ex)
-            {
-                return null;
+                else return false;
             }
 
         }
-        public List<Pricing> GetAll()
-        {
-            try
-            {
-                using (var _context = Db.Create())
-                {
-                    return _context.Pricings.Where(u => u.IsActive == true).ToList();
 
-                }
-
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-
-        }
-        public List<Pricing> GetAllByIds(List<int> ids)
-        {
-            try
-            {
-                using (var _context = Db.Create())
-                {
-                    return _context.Pricings.Where(u => u.IsActive == true && ids.Contains(u.Id)).ToList();
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-
-        }
         public void Dispose()
         {
             GC.SuppressFinalize(true);
         }
+
     }
 }

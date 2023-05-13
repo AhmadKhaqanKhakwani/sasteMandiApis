@@ -5,7 +5,6 @@ using Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 
 namespace BLL.Services
 {
@@ -159,7 +158,7 @@ namespace BLL.Services
                             CreatedOn = System.DateTime.Now,
                         }).ToList();
 
-                        var isListAdded =  _unitOfWork.SubCategoryRepository.AddRange(subCategories);
+                        var isListAdded = _unitOfWork.SubCategoryRepository.AddRange(subCategories);
                         if (isListAdded is null)
                         {
                             return false;
@@ -250,7 +249,7 @@ namespace BLL.Services
                         {
                             foreach (var item in idsToDelete)
                             {
-                                var isDeleted =  _unitOfWork.SubCategoryRepository.Delete(item);
+                                var isDeleted = _unitOfWork.SubCategoryRepository.Delete(item);
                                 if (!isDeleted)
                                 {
                                     return false;
@@ -336,7 +335,7 @@ namespace BLL.Services
                 locationObj.UpdatedOn = DateTime.Now;
                 locationObj.UpdatedBy = 1;
 
-               var isUpdated =  _unitOfWork.LocationRepository.Update(locationObj);
+                var isUpdated = _unitOfWork.LocationRepository.Update(locationObj);
 
                 return isUpdated != null;
             }
@@ -347,6 +346,95 @@ namespace BLL.Services
         {
             var result = _unitOfWork.LocationRepository.Delete(id);
             return result;
+        }
+
+
+        // AddProduct
+        public bool AddProduct(AddProductDto addProductDto)
+        {
+
+            // 1-Pricing
+            var pricingObj = new Pricing
+            {
+                Amount = addProductDto.defaultPrice,
+                CreatedBy = 1,
+                CreatedOn = DateTime.Now,
+                IsActive = true,
+                DiscountedAmount = 0,
+                IsDiscounted = false,
+            };
+
+            _unitOfWork.PricingRepository.Add(pricingObj);
+
+            // 2-Product
+            var product = new Product
+            {
+                TitleEng = addProductDto.engTitle,
+                TitleUrdu = addProductDto.urduTitle,
+                FeaturedCategoryId = addProductDto.productCategoryId,
+                DescriptionId = 3,
+                Sku = "123",
+                IsActive = true,
+                CreatedOn = DateTime.Now,
+                CreatedBy = 1,
+                DeafultPriceId = pricingObj.Id,
+
+            };
+
+            _unitOfWork.ProductRepository.Add(product);
+
+            // 3- ProductImage
+            var productImage = new ProductImage
+            {
+                ImageUrl = addProductDto.imgUrl,
+                IsActive = true,
+                ProductId = product.Id,
+                CreatedOn = DateTime.Now,
+                CreatedBy = 1,
+            };
+
+            _unitOfWork.ProductImageRepository.Add(productImage);
+
+            // 3- SubCategoryToProduct
+            var productSubCategory = addProductDto.productSubCategoryId.Select(u => new SubCategoryToProduct
+            {
+                ProductId = product.Id,
+                SubCategoryId = u,
+                CreatedOn = DateTime.Now,
+                CreatedBy = 1,
+                IsActive = true,
+            }).ToList();
+
+            _unitOfWork.ProductToSubCategoryRepository.AddList(productSubCategory);
+
+            var productPackingPricing = addProductDto.productPacking.Select(u => new Pricing
+            {
+                Amount = u.price,
+                CreatedBy = 1,
+                CreatedOn = DateTime.Now,
+                IsActive = true,
+                DiscountedAmount = 0,
+                IsDiscounted = false,
+
+            }).ToList();
+
+            _unitOfWork.PricingRepository.AddRange(productPackingPricing);
+
+            var productPackingList = addProductDto.productPacking.Select(u => new ProductPacking 
+            {
+                ProductId = product.Id,
+                Weight = u.weight,
+                WeightText = u.weightText,
+                PriceId = productPackingPricing.FirstOrDefault(k => k.Amount == u.price).Id,
+                IsDefault = false,
+                IsActive = true,
+                CreatedBy = 1,
+                CreatedOn = DateTime.Now,
+            }).ToList();
+
+
+            _unitOfWork.ProductPackingRepository.AddRange(productPackingList);
+            return true;
         }
 
 

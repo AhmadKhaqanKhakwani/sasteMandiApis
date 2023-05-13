@@ -1,9 +1,5 @@
 ﻿using Data.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Data.Repositories;
 
 namespace Data.Context.UnitOfWork
 {
@@ -21,6 +17,10 @@ namespace Data.Context.UnitOfWork
         IOrderDetailRepository OrderDetailRepository { get; }
         ILocationRepository LocationRepository { get; }
         IAddressRepository AddressRepository { get; }
+        IProductToSubCategoryRepository ProductToSubCategoryRepository { get; }
+        IProductPackingRepository ProductPackingRepository { get; }
+        IProductImageRepository ProductImageRepository { get; }
+
 
     }
 }

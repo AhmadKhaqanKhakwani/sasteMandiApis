@@ -17,6 +17,9 @@ namespace Data.Context.UnitOfWork
         private IOrderDetailRepository _orderDetailRepository;
         private ILocationRepository _locationRepository;
         private IAddressRepository _addressRepository;
+        private IProductToSubCategoryRepository _productToSubCategoryRepository;
+        private IProductPackingRepository _productPackingRepository;
+        private IProductImageRepository _productImageRepository;
 
 
 
@@ -25,6 +28,30 @@ namespace Data.Context.UnitOfWork
             get
             {
                 return _addressRepository ??= new AddressRepository();
+            }
+        }
+
+        public IProductImageRepository ProductImageRepository
+        {
+            get
+            {
+                return _productImageRepository ??= new ProductImageRepository();
+            }
+        }
+        public IProductPackingRepository ProductPackingRepository
+        {
+            get
+            {
+                return _productPackingRepository ??= new ProductPackingRepository();
+            }
+        }
+
+
+        public IProductToSubCategoryRepository ProductToSubCategoryRepository
+        {
+            get
+            {
+                return _productToSubCategoryRepository ??= new ProductToSubCategoryRepository();
             }
         }
         public ILocationRepository LocationRepository

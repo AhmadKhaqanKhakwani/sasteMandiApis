@@ -25,5 +25,8 @@ namespace BLL.Interfaces
         LocationDto GetLocation(int id);
         bool AddOrUpdateLocation(LocationDto locationDto);
         bool DeleteLocation(int id);
+
+        // AddProduct work
+        bool AddProduct(AddProductDto addProductDto);
     }
 }

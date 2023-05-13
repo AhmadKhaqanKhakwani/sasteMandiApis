@@ -31,6 +31,25 @@ namespace Data.Repositories
                 return null;
             }
         }
+
+
+        public List<ProductPacking> AddRange(List<ProductPacking> productPacking)
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    _context.ProductPackings.AddRange(productPacking);
+                    _context.SaveChanges();
+                }
+
+                return productPacking;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public ProductPacking Get(int id)
         {
             try

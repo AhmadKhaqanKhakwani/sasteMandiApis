@@ -20,6 +20,8 @@ namespace SasteMandi.Controllers
             configurationService = _configurationService;
         }
 
+        #region ConfigurationModule
+
         // slider  APIs
         [AllowAnonymous]
         [HttpGet]
@@ -40,7 +42,7 @@ namespace SasteMandi.Controllers
         [HttpPost]
         [ActionName("AddOrUpdateSlider")]
         [Route("AddOrUpdateSlider")]
-        public IActionResult AddOrUpdateSlider([FromBody] SliderDto slider) 
+        public IActionResult AddOrUpdateSlider([FromBody] SliderDto slider)
         {
             if (slider == null || slider.imageUrl.Trim() == "")
             {
@@ -137,7 +139,7 @@ namespace SasteMandi.Controllers
         {
             var records = configurationService.GetAllLocation();
             if (records == null)
-            return Ok(new { responseMessage = "No data found" });
+                return Ok(new { responseMessage = "No data found" });
 
             return Ok(records);
         }
@@ -151,7 +153,7 @@ namespace SasteMandi.Controllers
         {
             if (id == 0)
             {
-                return Ok(new { responseMessage = "Please provide an id"});
+                return Ok(new { responseMessage = "Please provide an id" });
             }
             var records = configurationService.GetLocation(id);
             if (records == null)
@@ -195,7 +197,28 @@ namespace SasteMandi.Controllers
                 return Ok(result);
             }
         }
+        #endregion
 
+        #region ProductModule
+
+        [AllowAnonymous]
+        [HttpPost]
+        [ActionName("AddProduct")]
+        [Route("AddProduct")]
+        public IActionResult AddProduct([FromBody] AddProductDto addProductDto)
+        {
+            if (addProductDto is null)
+            {
+                return Ok("Please provide valid payload");
+            }
+            var result = configurationService.AddProduct(addProductDto);
+
+            if (!result)
+                return Unauthorized(new { responseMessage = "Some thing went wrong." });
+
+            return Ok(result);
+        }
+        #endregion
 
 
 
