@@ -5,6 +5,7 @@ using Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace BLL.Services
 {
@@ -95,7 +96,7 @@ namespace BLL.Services
                     title = s.Title,
                     CreatedBy = s.CreatedBy,
                     IsActive = s.IsActive,
-                }).ToList()
+                }).Where(u => u.IsActive).ToList()
             }).ToList();
 
             return data;
@@ -158,10 +159,15 @@ namespace BLL.Services
                             CreatedOn = System.DateTime.Now,
                         }).ToList();
 
-                        _unitOfWork.SubCategoryRepository.AddRange(subCategories);
-                    }
+                        var isListAdded =  _unitOfWork.SubCategoryRepository.AddRange(subCategories);
+                        if (isListAdded is null)
+                        {
+                            return false;
+                        }
 
+                    }
                     return true;
+
 
                 }
                 else
@@ -178,13 +184,17 @@ namespace BLL.Services
 
                         var updatedFeatured = _unitOfWork.FeaturedCategoryRepository.Update(currentFeaturedCategory);
 
-                        
+
                         var subCategoriesDb = _unitOfWork.SubCategoryRepository.GetByFeaturedId(featuredCategoryDto.featuredCategoryId).Select(u => u.Id).ToList();
-                        // 58,59
+
+                        // Retrieves the IDs of subcategories from the SubCategoryRepository for the specified featuredCategoryDto.featuredCategoryId and stores them in the subCategoriesDb list.
+                        // Example: subCategoriesDb = [94, 95, 96]
 
                         var idsToDelete = subCategoriesDb.Where(u => !featuredCategoryDto.subCategory.Select(u => u.subCategoryId).ToList().Contains(u)).ToList();
-                        // 58, 0
 
+                        // Compares the subcategories in subCategoriesDb with the subcategories in featuredCategoryDto.subCategory by their subCategoryId property.
+                        // Retrieves the IDs from subCategoriesDb that are not present in featuredCategoryDto.subCategory and stores them in the idsToDelete list.
+                        // Example: idsToDelete = [96]
 
                         if (featuredCategoryDto.subCategory != null)
                         {
@@ -225,23 +235,11 @@ namespace BLL.Services
                                         currentSubCat.UpdatedBy = 1;
 
                                         var updatedSubCat = _unitOfWork.SubCategoryRepository.Update(currentSubCat);
-                                        //if (updatedSubCat != null) // if updated
-                                        //{
-                                        //    return true;
-                                        //}
-                                        //else return false;
+                                        if (updatedSubCat == null)
+                                        {
+                                            return false;
+                                        }
                                     }
-                                    //var subCatObj = new SubCategory()
-                                    //{
-                                    //    Id = item.subCategoryId,
-                                    //    FeaturedCategoryId = item.featuredCategoryId,
-                                    //    Title = item.title,
-                                    //    IsActive = item.IsActive,
-                                    //    DisplayOrder = item.displayOrder,
-                                    //    UpdatedOn = System.DateTime.Now,
-                                    //    UpdatedBy = 1
-                                    //};
-                                    //var updated = _unitOfWork.SubCategoryRepository.Update(subCatObj);
 
                                 }
                             }
@@ -252,23 +250,13 @@ namespace BLL.Services
                         {
                             foreach (var item in idsToDelete)
                             {
-                                _unitOfWork.SubCategoryRepository.Delete(item);
+                                var isDeleted =  _unitOfWork.SubCategoryRepository.Delete(item);
+                                if (!isDeleted)
+                                {
+                                    return false;
+                                }
                             }
                         }
-
-                        #region //  sub
-
-                        // subCategories
-                        //var subCategoryList = featuredCategoryDto.subCategory;
-                        //var subCatObj = new SubCategory()
-                        //{
-                        //    Title = featuredCategoryDto.text,
-                        //    IsActive = true,
-                        //    DisplayOrder = featuredCategoryDto.displayOrder,
-                        //    CreatedOn = System.DateTime.Now,
-                        //    CreatedBy = 1
-                        //};
-                        #endregion
                         return true;
                     }
                     else return false;
@@ -280,7 +268,6 @@ namespace BLL.Services
             }
             catch (System.Exception ex)
             {
-
                 return false;
             }
         }
@@ -337,8 +324,9 @@ namespace BLL.Services
                     CreatedOn = DateTime.Now,
                     CreatedBy = 1,
                 };
-                _unitOfWork.LocationRepository.Add(newLocation);
-                return true;
+                var isSaved = _unitOfWork.LocationRepository.Add(newLocation);
+                return isSaved != null;
+
             }
             else
             {
@@ -348,8 +336,9 @@ namespace BLL.Services
                 locationObj.UpdatedOn = DateTime.Now;
                 locationObj.UpdatedBy = 1;
 
-                _unitOfWork.LocationRepository.Update(locationObj);
-                return true;
+               var isUpdated =  _unitOfWork.LocationRepository.Update(locationObj);
+
+                return isUpdated != null;
             }
 
         }
