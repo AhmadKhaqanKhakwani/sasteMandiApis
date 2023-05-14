@@ -130,7 +130,7 @@ namespace BLL.Services
                 {
                     featuredCategoryId = category.Id,
                     imageURL   = category.ImageUrl,
-                    text = category.Text,
+                    text = category.Title,
                     displayOrder = category.DisplayOrder,
                     subCategory = subCategories.Where(u=>u.featuredCategoryId.Equals(category.Id)).ToList()
                 });
