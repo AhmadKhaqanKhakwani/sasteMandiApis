@@ -16,6 +16,8 @@ namespace BLL.Dtos.Mobile
         public int displayOrder { get; set; }
         public string imageURL { get; set; }
         public string text { get; set; }
+        public bool isPackage { get; set; }
+
         public List<SubCategoryDto> subCategory { get; set; }
     }
     public class SubCategoryDto

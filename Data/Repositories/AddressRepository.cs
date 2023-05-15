@@ -28,6 +28,23 @@ namespace Data.Repositories
                 return null;
             }
         }
+        public List<Address> UpdateList(List<Address> Address)
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    _context.Addresses.UpdateRange(Address);
+                    _context.SaveChanges();
+                }
+
+                return Address;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public Address Get(int id)
         {
             try

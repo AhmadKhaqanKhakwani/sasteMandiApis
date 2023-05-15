@@ -19,6 +19,7 @@ namespace BLL.Interfaces
         bool placeOrder(CreateOrderDto createOrderDto);
         bool addAddress(AddressDto addressDto);
         List<AddressDto> getAddress();
+        bool addDefeaultAddress(int addressId);
         bool deleteAddress(int id);
 
     }
