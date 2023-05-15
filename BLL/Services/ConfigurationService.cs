@@ -438,5 +438,38 @@ namespace BLL.Services
         }
 
 
+        // GetAllProduct
+        public List<PublicProductDto> getAllProducts()
+        {
+            var products = _unitOfWork.ProductRepository.GetAllProducts();
+
+            var pricing = _unitOfWork.PricingRepository.GetAllByIds(products.Select(u => u.DeafultPriceId).ToList());
+
+            var productDtos = new List<PublicProductDto>();
+
+            foreach (var product in products)
+            {
+                var packingPricing = _unitOfWork.PricingRepository.GetAllByIds(product.ProductPackings.Select(u => u.PriceId).ToList());
+
+                var productDto = new PublicProductDto()
+                {
+                    productId = product.Id,
+                    textEng = product.TitleEng,
+                    textUrdu = product.TitleUrdu,
+                    imageUrl = product.ProductImages.FirstOrDefault()?.ImageUrl ?? "",
+                    displayOrder = 1,
+                    packaging = product.ProductPackings.Select(u => new PackagingDto() { packingId = u.Id, text = u.PackingTitle, price = (int)packingPricing.FirstOrDefault(p => p.Id == u.PriceId).Amount, oldPrice = (int)packingPricing.FirstOrDefault(p => p.Id == u.PriceId).DiscountedAmount, isDeafult = false }).ToList(),
+                    //categoryId = product.FeaturedCategoryId,
+                    //subCategory = product.SubCategoryToProducts.Select(u => u.Id).ToList()
+                };
+
+                productDto.packaging.Add(new PackagingDto() { packingId = 0, text = "1 Kg", price = (int)pricing.FirstOrDefault(p => p.Id == product.DeafultPriceId).Amount, oldPrice = (int)pricing.FirstOrDefault(p => p.Id == product.DeafultPriceId).DiscountedAmount, isDeafult = true });
+                productDtos.Add(productDto);
+            }
+
+            return productDtos;
+        }
+
+
     }
 }

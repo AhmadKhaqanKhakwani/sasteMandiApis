@@ -1,14 +1,11 @@
-﻿
-using Data.Utils;
-using Utility.Commons;
+﻿using Data.Context;
+using Data.Entities;
+using Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using Data.Interfaces;
-using Data.Context;
-using Data.Entities;
 
 namespace Data.Repositories
 {
@@ -35,10 +32,10 @@ namespace Data.Repositories
         {
             try
             {
-                using(var _context = Db.Create())
+                using (var _context = Db.Create())
                 {
-                    
-                return _context.Products.Find(id);
+
+                    return _context.Products.Find(id);
 
                 }
 
@@ -47,7 +44,7 @@ namespace Data.Repositories
             {
                 return null;
             }
-          
+
         }
         public List<Product> GetAll()
         {
@@ -55,7 +52,7 @@ namespace Data.Repositories
             {
                 using (var _context = Db.Create())
                 {
-                    return _context.Products.Where(u=>u.IsActive == true).Include(u=>u.ProductPackings).Include(u=>u.SubCategoryToProducts).Include(u=>u.ProductImages).ToList();
+                    return _context.Products.Where(u => u.IsActive == true).Include(u => u.ProductPackings).Include(u => u.SubCategoryToProducts).Include(u => u.ProductImages).ToList();
 
                 }
 
@@ -72,7 +69,7 @@ namespace Data.Repositories
             {
                 using (var _context = Db.Create())
                 {
-                    return _context.Products.Where(u => u.IsActive == true && u.FeaturedCategoryId == featuredCategoryId && u.SubCategoryToProducts.Select(u=>u.SubCategoryId).Contains(SubCategoryId))
+                    return _context.Products.Where(u => u.IsActive == true && u.FeaturedCategoryId == featuredCategoryId && u.SubCategoryToProducts.Select(u => u.SubCategoryId).Contains(SubCategoryId))
                         .Include(u => u.ProductPackings).Include(u => u.SubCategoryToProducts).Include(u => u.ProductImages).ToList();
 
                 }
@@ -84,7 +81,25 @@ namespace Data.Repositories
             }
 
         }
-        
+
+        public List<Product> GetAllProducts()
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    return _context.Products.Where(u => u.IsActive == true)
+                        .Include(u => u.ProductPackings).Include(u => u.SubCategoryToProducts).Include(u => u.ProductImages).ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
         public List<Product> GetAllByIds(List<int> productIds)
         {
             try
@@ -102,7 +117,7 @@ namespace Data.Repositories
             }
 
         }
-        
+
 
         public void Dispose()
         {

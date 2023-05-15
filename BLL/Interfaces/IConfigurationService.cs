@@ -28,5 +28,6 @@ namespace BLL.Interfaces
 
         // AddProduct work
         bool AddProduct(AddProductDto addProductDto);
+        List<PublicProductDto> getAllProducts();
     }
 }
