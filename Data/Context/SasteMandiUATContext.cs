@@ -48,7 +48,9 @@ namespace Data.Entities
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=Hamza;Database=SasteMandiUAT;Trusted_Connection=True;");
+                // optionsBuilder.UseSqlServer("Server=DESKTOP-L9VKJL5;Database=SasteMandiUAT;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Data Source=SQL5103.site4now.net;Initial Catalog=db_a5637b_sastimandi;User Id=db_a5637b_sastimandi_admin;Password=sastimandi09");
+
             }
         }
 
@@ -63,6 +65,8 @@ namespace Data.Entities
                 entity.Property(e => e.CreatedOn).HasColumnType("datetime");
 
                 entity.Property(e => e.GeoLocaton).IsRequired();
+
+                entity.Property(e => e.IsDefault).HasColumnName("isDefault");
 
                 entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
 
@@ -249,6 +253,8 @@ namespace Data.Entities
                 entity.ToTable("PackageDetail");
 
                 entity.Property(e => e.CreatedOn).HasColumnType("datetime");
+
+                entity.Property(e => e.ProductPackageWeight).HasMaxLength(50);
 
                 entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
 
@@ -541,7 +547,7 @@ namespace Data.Entities
                 entity.Property(e => e.UpdatedOn).HasColumnType("datetime");
             });
 
-           
+            
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

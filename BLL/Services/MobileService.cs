@@ -77,7 +77,7 @@ namespace BLL.Services
                 {   packageId = package.Id,
                     title = package.PackageTitle,
                     totalPrice = package.PackageTotalPrice,
-                    products = products.Where(u => package.PackageDetails.Select(u => u.ProductId).ToList().Contains(u.Id)).Select(u => new PublicProductDto().toPackageProductDTO(u)).ToList()
+                    products = products.Where(u => package.PackageDetails.Select(u => u.ProductId).ToList().Contains(u.Id)).Select(u => new PublicProductDto().toPackageProductDTO(u, package.PackageDetails.ToList())).ToList()
                  }
                 ) ;
              
@@ -132,6 +132,7 @@ namespace BLL.Services
                     imageURL   = category.ImageUrl,
                     text = category.Title,
                     displayOrder = category.DisplayOrder,
+                    isPackage = category.IsPackage,
                     subCategory = subCategories.Where(u=>u.featuredCategoryId.Equals(category.Id)).ToList()
                 });
             }
@@ -142,22 +143,82 @@ namespace BLL.Services
         //place-order
         public bool placeOrder(CreateOrderDto createOrderDto)
         {
-            var products = _unitOfWork.ProductRepository.GetAllByIds(createOrderDto.products.Select(u => u.productId).ToList());
-            // var packages = _unitOfWork.PackageRepository.ge
+            var allPricing = new List<int>();
 
+            var products = _unitOfWork.ProductRepository.GetAllByIds(createOrderDto.products.Select(u => u.productId).ToList());
+            var packages = _unitOfWork.PackageRepository.GetAllByIds(createOrderDto.packages.Select(u => u.packageId).ToList());
+            
+            allPricing.AddRange(products.Select(u => u.DeafultPriceId).ToList());
+            
+
+            foreach (var product in products)
+            {
+                allPricing.AddRange(product.PackageDetails.Select(u=>u.PriceId).ToList());
+            }
+
+
+            var pricing = _unitOfWork.PricingRepository.GetAllByIds(allPricing);
 
             Order order = new Order()
             {
-                AdressId = createOrderDto.address.addressId,
+                AdressId = createOrderDto.addressId,
                 StatusId = (int)OrderStatusEnum.Active,
                 IsActive = true,
                 Total = 0,
                 DiscountTotal = 0,
                 TaxTotal = 0,
+                CustomerId = 1,
                 CreatedBy = 1,
                 CreatedOn = DateTime.Now
             };
             _unitOfWork.OrderRepository.Add(order);
+
+            List<OrderDetail> orderDetails = new List<OrderDetail>();
+            foreach(var product in createOrderDto.products)
+            {
+                OrderDetail orderDetail = new OrderDetail()
+                {
+                    EntityId = product.productId,
+                    EntityTypeId = 1,
+                    IsActive = true,
+                    OrderId = order.Id,
+                    
+                    PriceId = product.packingId == 0 ? 
+                    products.FirstOrDefault(u=>u.Id == product.productId).DeafultPriceId : 
+                    products.FirstOrDefault(u => u.Id == product.productId).ProductPackings.FirstOrDefault(u=>u.Id == product.packingId).PriceId,
+                    PackingId = product.packingId,
+
+                    TotalQty = product.qty,
+                    CreatedBy = 1,
+                    CreatedOn = DateTime.Now,
+                    
+                };
+
+               orderDetails.Add(orderDetail);
+            }
+
+            //foreach (var product in createOrderDto.packages)
+            //{
+            //    OrderDetail orderDetail = new OrderDetail()
+            //    {
+            //        EntityId = product.packageId,
+            //        EntityTypeId = 1,
+            //        IsActive = true,
+            //        OrderId = order.Id,
+
+            //        PriceId = product.packingId == 0 ?
+            //        products.FirstOrDefault(u => u.Id == product.productId).DeafultPriceId :
+            //        products.FirstOrDefault(u => u.Id == product.productId).ProductPackings.FirstOrDefault(u => u.Id == product.packingId).PriceId,
+            //        PackingId = 0,
+            //        TotalQty = product.qty,
+            //        CreatedBy = 1,
+            //        CreatedOn = DateTime.Now,
+
+            //    };
+
+            //    orderDetails.Add(orderDetail);
+            //}
+
 
             return true;
         }
@@ -196,11 +257,39 @@ namespace BLL.Services
                 googleLocation = u.GeoLocaton,
                 locationText = u.Location.Title,
                 addressText = u.AddressText,
-                locationId = u.LocationId
+                locationId = u.LocationId,
+                isdefault = u.IsDefault
+
             }).ToList();
 
 
             return locationDto;
+        }
+        public bool addDefeaultAddress(int addressId)
+        {
+            try
+            {
+                var addresses = _unitOfWork.AddressRepository.GetAll();
+
+                foreach (var address in addresses)
+                {
+                    address.IsDefault = false;
+                }
+                _unitOfWork.AddressRepository.UpdateList(addresses);
+
+                var defaultAddress = _unitOfWork.AddressRepository.Get(addressId);
+
+                defaultAddress.IsDefault = true;
+
+                _unitOfWork.AddressRepository.UpdateAddress(defaultAddress);
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+
+            return true;
         }
         public dynamic calculateOrderDetails(List<Product> products, List<Package> packages)
         {

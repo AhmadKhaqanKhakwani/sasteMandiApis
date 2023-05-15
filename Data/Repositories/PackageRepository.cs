@@ -64,7 +64,23 @@ namespace Data.Repositories
             }
 
         }
+        public List<Package> GetAllByIds(List<int> packageIds)
+        {
+            try
+            {
+                using (var _context = Db.Create())
+                {
+                    return _context.Packages.Where(u => u.IsActive == true && packageIds.Contains(u.Id)).Include(u => u.PackageDetails).ToList();
 
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
         public void Dispose()
         {
             GC.SuppressFinalize(true);

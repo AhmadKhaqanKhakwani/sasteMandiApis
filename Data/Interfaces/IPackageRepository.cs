@@ -10,6 +10,7 @@ namespace Data.Interfaces
         Package Add(Package package);
         Package Get(int id);
         List<Package> GetAll();
+        List<Package> GetAllByIds(List<int> packageIds);
         void Dispose();
 
     }

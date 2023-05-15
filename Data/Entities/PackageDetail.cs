@@ -14,6 +14,7 @@ namespace Data.Entities
         public DateTime? CreatedOn { get; set; }
         public int? UpdatedBy { get; set; }
         public DateTime? UpdatedOn { get; set; }
+        public string ProductPackageWeight { get; set; }
 
         public virtual Package Package { get; set; }
         public virtual Pricing Price { get; set; }

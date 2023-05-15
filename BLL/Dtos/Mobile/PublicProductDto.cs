@@ -31,7 +31,7 @@ namespace BLL.Dtos.Mobile
 
             return obj;
         }
-        public PublicProductDto toPackageProductDTO(Product product)
+        public PublicProductDto toPackageProductDTO(Product product,List<PackageDetail> packagedetail)
         {
             var obj = new PublicProductDto()
             {
@@ -40,7 +40,7 @@ namespace BLL.Dtos.Mobile
                 imageUrl = product.ProductImages.FirstOrDefault()?.ImageUrl ?? "",
                 displayOrder = 1,
                 categoryId = product.FeaturedCategoryId,
-                packageProductWeight = "2 KG"
+                packageProductWeight = packagedetail.FirstOrDefault(u=>u.ProductId == product.Id).ProductPackageWeight
             };
 
             return obj;
@@ -78,8 +78,9 @@ namespace BLL.Dtos.Mobile
     {
         public List<ProductAndPackage> products { get; set; }
         public List<PackageOrderDto> packages { get; set; }
-        public AddressDto address { get; set; }
-        public string freetext { get; set; }
+        public int addressId { get; set; }
+        public string detail { get; set; }
+        public bool isCutting { get; set; }
         public int discountId { get; set; }
 
     }
@@ -88,6 +89,7 @@ namespace BLL.Dtos.Mobile
     {
         public int addressId { get; set; }
         public int locationId { get; set; }
+        public bool isdefault { get; set; }
         public string addressText { get; set; }
         public string locationText { get; set; }
         public string googleLocation { get; set; }

@@ -25,3 +25,5 @@ AccountManagement\AccountManagement\bin\Debug\net6.0
 *.dll
 *.pdb
 *.cache
+*.pdb
+*.dll

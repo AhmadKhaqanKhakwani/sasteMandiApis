@@ -10,6 +10,7 @@ namespace Data.Entities
         public string GeoLocaton { get; set; }
         public int LocationId { get; set; }
         public bool IsActive { get; set; }
+        public bool IsDefault { get; set; }
         public int CreatedBy { get; set; }
         public DateTime CreatedOn { get; set; }
         public int? UpdatedBy { get; set; }

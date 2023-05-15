@@ -107,7 +107,7 @@ namespace SasteMandi.Controllers
         [Route("placeOrder")]
         public IActionResult placeOrder([FromBody] CreateOrderDto createOrderDto)
         {
-            if (createOrderDto == null || createOrderDto.address.locationId == 0)
+            if (createOrderDto == null || createOrderDto.addressId == 0)
                 return Unauthorized(new { responseMessage = "Payload is incorrect" });
 
             _mobileService.placeOrder(createOrderDto);
@@ -146,6 +146,20 @@ namespace SasteMandi.Controllers
             return Ok(result);
         }
 
+        [AllowAnonymous]
+        [HttpGet]
+        [ActionName("setDefaultAddress")]
+        [Route("setDefaultAddress")]
+        public IActionResult setDefaultAddress(int id)
+        {
+
+            var result = _mobileService.addDefeaultAddress(id);
+
+            if (!result)
+                return Unauthorized(new { responseMessage = "Some thing went wrong." });
+
+            return Ok(new { responseMessage = "Success." });
+        }
         [AllowAnonymous]
         [HttpGet]
         [ActionName("deleteAdresses")]

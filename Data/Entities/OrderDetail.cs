@@ -9,6 +9,7 @@ namespace Data.Entities
         public int OrderId { get; set; }
         public int EntityId { get; set; }
         public int EntityTypeId { get; set; }
+        public int? PackingId { get; set; }
         public int PriceId { get; set; }
         public decimal TotalQty { get; set; }
         public bool IsActive { get; set; }
